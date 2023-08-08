@@ -7,5 +7,5 @@
 //
 
 import Foundation
-import NFZMSmartNetworking_iOS
+import AlamoSmartNetworking
 

@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'NFZMSmartNetworking-iOS'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of EMSmartNetworking.'
+  s.name             = 'AlamoSmartNetworking'
+  s.version          = '1.0.0'
+  s.summary          = 'Alamofire wrapper ,can be used as objective-c bridge'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Aron1987@126.com/NFZMSmartNetworking-iOS'
+  s.homepage         = 'https://github.com/iamanthonyzhu/AlamoSmartNetworking'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Aron1987@126.com' => 'lixiefeng@evergrande.com' }
-  s.source           = { :git => 'ssh://gogs@gogs.infzm.com:22403/zhuWei/NFZMSmartNetworking-iOS.git', :tag => s.version.to_s }
+  s.author           = { 'iamanthonyzhu@163.com' => 'iamanthonyzhu@163.com' }
+  s.source           = { :git => 'git@github.com:iamanthonyzhu/AlamoSmartNetworking.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -46,7 +46,7 @@ TODO: Add long description of the pod here.
   #s.dependency 'CocoaLumberjack'
   
   s.subspec 'Core' do |core|
-      core.source_files = 'EMSmartNetworking/Classes/Core/*.{h,m,swift}'
+      core.source_files = 'AlamoSmartNetworking/Classes/Core/*.{h,m,swift}'
   end
   
   s.prefix_header_contents = <<-EOS

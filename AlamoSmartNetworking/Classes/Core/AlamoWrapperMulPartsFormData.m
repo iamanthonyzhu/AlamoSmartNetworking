@@ -6,7 +6,7 @@
 //
 
 #import "AlamoWrapperMulPartsFormData.h"
-#import "NFZMSmartNetworking_iOS-Swift.h"
+#import "AlamoSmartNetworking-Swift.h"
 
 typedef NS_ENUM(NSInteger, AWMulPartsFormDataType) {
     FileUrl_Name,

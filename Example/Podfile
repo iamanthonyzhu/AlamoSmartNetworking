@@ -1,10 +1,5 @@
 #use_frameworks!
 
-=begin
-source 'ssh://gogs@gogs.digif.net:22221/sujiang/nzspecs.git' #我们自己的私有spec仓库的地址
-=end
-#source 'https://github.com/CocoaPods/Specs.git' #官方仓库的地址
-
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 source 'https://github.com/aliyun/aliyun-specs.git'
 platform :ios, '10.0'
@@ -15,10 +10,9 @@ target 'EMSmartNetworking_Example' do
   pod 'YYModel', '1.0.4'
   pod 'CocoaLumberjack','3.4.2', :inhibit_warnings => true
   pod 'Alamofire', '~>5.6.4'
-  pod 'NFZMSmartNetworking-iOS', :path => '../'
+  pod 'AlamoSmartNetworking', :path => '../',:subspecs => ['Core']
+  pod 'extobjc'
   target 'EMSmartNetworking_Tests' do
     inherit! :search_paths
-
-    
   end
 end
