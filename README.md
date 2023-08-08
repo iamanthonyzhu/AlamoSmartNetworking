@@ -22,7 +22,7 @@ pod 'EMSmartNetworking'
 
 ## Author
 
-Aron1987@126.com, lixiefeng@evergrande.com
+iamanthonyzhu@163.com
 
 ## License
 
