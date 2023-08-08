@@ -8,6 +8,24 @@
 import Foundation
 import Alamofire
 
+/// Reachability of the `AlamoFire`,used as objc bridge definition of states.
+/// State `Unkonwn` , initial state. State`NotReachable`,network can not be reached.State ConnectViaEthOrWifi', network is connected by ethent or wifi. State `ConnectViaCellular`, network is connected by cellular as 4G or 5G for example.
+@objc public enum AlamoFireNetStatus: NSInteger {
+    case Unknown, NotReachable, ConnectViaEthOrWifi, ConnectViaCellular
+}
+
+/// Request Parameters Encoding Method.used as objc bridge definition for parameter encoding.
+@objc public enum RequestParameterEncoding: NSInteger {
+    case URL, URLEncodedInURL, JSON
+}
+
+/// Alamofire Session Type , used as objc bridge for different type session used .
+/// Type `Default`, Alamofire Session Default. Type 'ServerTrust', initialize https linke with ServerTrustManager for certification verification. Type `DownLoad`, initialized for download link. Type `Upload`, initialzied for upload link.
+@objc public enum SessionType: NSInteger {
+    case Defualt, ServerTrust, DownLoad, UpLoad
+}
+
+
 open class AlamoSmartNetAgent {
     public static let dispatchQueue = DispatchQueue(label: "com.infzm.infzm.alamoSmartNetAgetn.completion-queue")
     
@@ -204,12 +222,12 @@ open class AlamoSmartNetAgent {
         configuration.alamoSmartNetworkLogInfo(log: "\n===AlamoSmartNetWorking Upload===\n<<<URL: \(URLString) \n<<<METHOD: \(method) \n<<<PARAMS:  \(dicParams) \n<<<Headers:  \(reqHeaders ?? [:]) ")
         
         let stub:AlamoSmartRequestStub = AlamoSmartRequestStub(apiName: apiName, config: configuration, success: success, failure: failure) { reqConstructor, taskAsyncConstructor, completeHandler in
-            let request = self.uploadDataTask(session: useSession, urlString: URLString, headers:reqHeaders, multipartFormData: { MultipartDataWrapper in
+            let request = self.uploadDataTask(session: useSession, urlString: URLString, headers:reqHeaders, multipartFormData: { dataWrapper in
                 let formData:AlamoWrapperMulPartsFormData = AlamoWrapperMulPartsFormData()
                 formData.appendParameters(dicParams)
                 constructBodyBlock(formData)
-                formData.convert(toMulParsDataWrapper: MultipartDataWrapper)
-
+                formData.convert(toMulParsDataWrapper: dataWrapper)
+                
             }, progressBlock: progress, constructor: taskAsyncConstructor) { response, json in
                 completeHandler(response,json,nil)
             } failure: { response, error in
