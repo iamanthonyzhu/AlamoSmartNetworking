@@ -1,9 +1,9 @@
 
 //  EatNetWorking.m
-//  BaseApp
 //
-//  Created by Infzm on 15/3/27.
-//  Copyright (c) 2015年 sunima. All rights reserved.
+//
+//  Created by anthony zhu on 2023/4/28.
+//  Copyright © 2023 . All rights reserved.
 //
 
 #import "NZNetworking.h"

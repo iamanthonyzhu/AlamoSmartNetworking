@@ -1,9 +1,9 @@
 //
 //  NZNetworkingMacros.h
-//  nfzm
 //
-//  Created by anthony zhu on 2023/5/5.
-//  Copyright © 2023 nfzm. All rights reserved.
+//
+//  Created by anthony zhu on 2023/4/28.
+//  Copyright © 2023 . All rights reserved.
 //
 
 #ifndef NZNetworkingMacros_h

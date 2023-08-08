@@ -1,9 +1,9 @@
 //
 //  NZNetworkingConfiguration.h
-//  nfzm
 //
-//  Created by anthony zhu on 2021/12/23.
-//  Copyright © 2021 nfzm. All rights reserved.
+//
+//  Created by anthony zhu on 2023/4/28.
+//  Copyright © 2023 . All rights reserved.
 //
 
 

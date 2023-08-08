@@ -1,8 +1,9 @@
 //
 //  EMSmartNetworkingWeakProxy.h
-//  EMSmartNetworking
 //
-//  Created by Aron.li on 2020/8/7.
+//
+//  Created by anthony zhu on 2023/4/28.
+//  Copyright © 2023 . All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

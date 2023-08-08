@@ -1,9 +1,9 @@
 //
 //  EMAppDelegate.m
-//  EMSmartNetworking
 //
-//  Created by Aron1987@126.com on 03/26/2020.
-//  Copyright (c) 2020 Aron1987@126.com. All rights reserved.
+//
+//  Created by anthony zhu on 2023/4/28.
+//  Copyright © 2023 . All rights reserved.
 //
 
 #import "EMAppDelegate.h"
