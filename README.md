@@ -18,7 +18,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'Alamofire', '~>5.6.4'
-pod 'AlamoSmartNetworking', :path => '../',:subspecs => ['Core']
+pod 'AlamoSmartNetworking', :subspecs => ['Core']
 
 ```
 
