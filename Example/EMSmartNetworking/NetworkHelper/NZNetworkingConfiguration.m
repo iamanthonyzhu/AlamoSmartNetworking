@@ -17,14 +17,7 @@
 
 #define CERT_Expiry_Date @"2024/02/07 00:00:00"
 
-static NSString *const kContentType = @"Content-Type";
 static NSString *const kAccept = @"Accept";
-static NSString *const kTokenKey = @"PET-SESSION-TOKEN";
-static NSString *const kSignKey = @"X-XCLOUD-SIGN";
-static NSString *const kUserId = @"User-Id";
-static NSString *const kUserAgent = @"User-Agent";
-static NSString *const kPlatform = @"platform";
-
 static NSString * const kErrorDomain = @"nz.Networking";
 
 static force_inline id NZNetworkingJSonObjectByRemovingKeysWithNullValue(id JSonObject) {
@@ -177,7 +170,7 @@ static force_inline id NZNetworkingJSonObjectByRemovingKeysWithNullValue(id JSon
             };
         } else {
             self.needCertificateVerification = ^BOOL(NSString *baseURLString) {
-                if ([baseURLString hasPrefix:@"https://api.infzm.com"] || [baseURLString hasPrefix:@"https://passport.infzm.com"]) {
+                if ([baseURLString hasPrefix:@"https://xxx.xxx.com"] || [baseURLString hasPrefix:@"https://yyy.xxx.com"]) {
                     return YES;
                 }
                 return NO;

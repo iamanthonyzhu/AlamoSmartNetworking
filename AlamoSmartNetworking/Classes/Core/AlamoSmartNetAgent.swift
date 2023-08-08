@@ -42,7 +42,7 @@ open class AlamoSmartNetAgent {
         config.httpShouldUsePipelining = true
         config.httpShouldSetCookies = false
         let secTrustEval:PublicKeysTrustEvaluator = PublicKeysTrustEvaluator(validateHost: true)
-        let secTrustManager:ServerTrustManager = ServerTrustManager(allHostsMustBeEvaluated:false, evaluators: ["api.infzm.com":secTrustEval,"passport.infzm.com":secTrustEval])
+        let secTrustManager:ServerTrustManager = ServerTrustManager(allHostsMustBeEvaluated:false, evaluators: ["xxx.xxx.com":secTrustEval,"yyy.xxx.com":secTrustEval])
         return Session(configuration: config,rootQueue: dispatchQueue, serverTrustManager: secTrustManager)
     }()
     /// downloadSession with timeout 120s
